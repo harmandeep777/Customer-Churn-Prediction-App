@@ -81,7 +81,7 @@ categorical_ref = reference['categorical']
 
 st.markdown("""
 <div class="main-header">
-    <h1>📡 Customer Churn Predictor</h1>
+    <h1> Customer Churn Predictor</h1>
     <p>Predict whether a telecom customer is likely to churn, one customer at a time or in bulk.</p>
 </div>
 """, unsafe_allow_html=True)
