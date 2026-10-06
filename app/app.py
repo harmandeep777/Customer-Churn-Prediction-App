@@ -14,7 +14,7 @@ import transformer
 MODEL_PATH = os.path.join(BASE_DIR, 'models', 'churn_model.pkl')
 REFERENCE_PATH = os.path.join(BASE_DIR, 'app', 'reference_data.json')
 
-st.set_page_config(page_title='Customer Churn Predictor', page_icon='📡', layout='wide')
+st.set_page_config(page_title='Customer Churn Predictor', page_icon='H', layout='wide')
 
 st.markdown("""
 <style>
@@ -86,7 +86,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-tab_single, tab_batch = st.tabs(['🔮 Single Prediction', '📁 Batch Upload'])
+tab_single, tab_batch = st.tabs([' Single Prediction', ' Batch Upload'])
 
 st.sidebar.title('Customer Form')
 st.sidebar.caption('Fill this in for the Single Prediction tab')
@@ -145,14 +145,14 @@ with tab_single:
         if pred[0] == 0:
             st.markdown(f"""
             <div class="result-card result-card-safe">
-                <h2>✅ Likely to Stay</h2>
+                <h2> Likely to Stay</h2>
                 <p>Estimated churn probability: <b>{proba:.1%}</b></p>
             </div>
             """, unsafe_allow_html=True)
         else:
             st.markdown(f"""
             <div class="result-card result-card-risk">
-                <h2>⚠️ At Risk of Churning</h2>
+                <h2> At Risk of Churning</h2>
                 <p>Estimated churn probability: <b>{proba:.1%}</b></p>
             </div>
             """, unsafe_allow_html=True)
